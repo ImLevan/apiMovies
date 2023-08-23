@@ -5,7 +5,7 @@ window.onload = async () =>{
 }
 
 async function defaultSearch(busqueda){
-    const URL = `https://omdbapi.com/?s=${busqueda}&page=1&apikey=fc1fef96`;
+    const URL = `https://omdbapi.com/?s=${busqueda}&page=1&apikey=b6a1b97`;
     const res = await fetch(`${URL}`);
     const data = await res.json();
     defaultLoad(data.Search);
@@ -40,7 +40,7 @@ function movieLoad(movie){
 function loadMovieMain(div){
     div.addEventListener('click', async () => {
         // console.log(movie.dataset.id);
-        const result = await fetch(`http://www.omdbapi.com/?i=${div.dataset.id}&apikey=fc1fef96`);
+        const result = await fetch(`http://www.omdbapi.com/?i=${div.dataset.id}&apikey=b6a1b97`);
         const movieDetails = await result.json();
         displayMovieDetails(movieDetails);
     });
