@@ -5,7 +5,7 @@ const divPeliculas = document.getElementById('peliculas');
 
 // load movies from API
 async function loadMovies(searchTerm){
-    const URL = `https://omdbapi.com/?s=${searchTerm}&page=1&apikey=fc1fef96`;
+    const URL = `https://omdbapi.com/?s=${searchTerm}&page=1&apikey=b6a1b97`;
     const res = await fetch(`${URL}`);
     const data = await res.json();
     if(data.Response == "True") displayMovieList(data.Search);
@@ -54,7 +54,7 @@ function loadMovieDetails(){
             // console.log(movie.dataset.id);
             searchList.classList.add('hide-search-list');
             movieSearchBox.value = "";
-            const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=fc1fef96`);
+            const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=b6a1b97`);
             const movieDetails = await result.json();
             displayMovieDetails(movieDetails);
         });
