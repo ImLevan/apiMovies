@@ -54,7 +54,8 @@ function loadMovieDetails(){
             // console.log(movie.dataset.id);
             searchList.classList.add('hide-search-list');
             movieSearchBox.value = "";
-            const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=b6a1b97`);
+            //Llamada http en sitio https no me esta funcionando, por eso no seteo la apikey
+            const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=bbbb`);
             const movieDetails = await result.json();
             displayMovieDetails(movieDetails);
         });
